@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assessment</title>
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- Load the Google Maps JavaScript API -->
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClOMNdl_MOA9NGu2nZvgTEDD7uhFCJg_c"></script>
+
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <!-- Load the custom JavaScript file -->
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <!-- Main heading -->
+    <h1 id="main-heading">Goole Maps, Tweeter Data and Weather API project</h1>
+    <main>
+        <!-- Map area -->
+        <div id="map-area"></div>
+      
+        <!-- Search location section -->
+        <div class="search-location">
+            <h3>Select a Tweet on the map to calculate the journey distance and get the directions from the Tweet's
+                location to Newcastle Upon Tyne, UK</h3>
+            <p>Selected Tweet's location: <span id="origin-address" name="origin-address"></span></p>
+
+            <!-- Buttons for showing and clearing directions and choosing travel mode-->
+            <select id="travel-mode">
+                <option  style="cursor: pointer;" value="driving">Driving</option>
+                <option style="cursor: pointer; margin-top: 20px;" value="walking">Walking</option>
+              </select>
+            <button id="submit-button-directions">Show Journey Details </button>
+            <button id="clear-directions">Clear all directions</button>
+
+        </div>
+
+        <!-- Error message section -->
+        <div id="error-message" style="color: red;"></div>
+
+        <!-- Weather conditions section -->
+        <div>
+            <h3>Weather Conditions of <span id="weather-location">Newcastle Upon Tyne, UKQ</span></h3>
+            <!-- <p>Clouds: <span id="clouds"> </span> </p> -->
+            <p>Rain: <span id="humidity"></span></p>
+            <p>Windspeed: <span id="windspeed"></span></p>
+            <p>Temperature: <span id="temperature"></span></p>
+        </div>
+
+        <!-- Distance info and directions panel sections -->
+        <div id="distance-info"></div>
+        <div id="directionsPanel"></div>
+
+        <!-- Tweets section -->
+        <div id="tweets">
+            <h2 style="text-align: left; margin-bottom: 4rem; margin-left: 2rem;">Tweets containing #climatechange or #netzero</h2>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Razvan Cristian Pintea</p>
+    </footer>
+
+</body>
+
+</html>
